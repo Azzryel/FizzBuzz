@@ -2,6 +2,12 @@ body {
     background-color: black;
 }
 
+#title {
+    color: yellowgreen;
+    font-size: 100px;
+    margin-left: 34%;
+}
+
 .main-div {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
@@ -17,6 +23,8 @@ body {
 }
 
 #number {
-    margin-left: 45%;
-    margin-top: 50px;
+    margin-left: 46%;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 50%
 }
