@@ -17,6 +17,7 @@
 
 
     <script>
+        const container = document.querySelector("#main-div");
         const btnInput = document.querySelector("#number");
 
         btnInput.addEventListener ("click", () => {
@@ -27,20 +28,27 @@
             }
             fizzBuzz(number);
         });
+
+        function createDiv (value) {
+            box = document.createElement("div");
+            box.className = "box";
+            box.innerHTML = value;
+            container.appendChild(box);
+        }
         
         function fizzBuzz (number) {
             for (let i = 1; i <= number; i++) {
                 if (i % 3 === 0 && i % 5 === 0) {
-                    console.log("FizzBuzz");
+                    createDiv("FizzBuzz");
                 }
                 else if (i % 3 === 0) {
-                    console.log("Fizz");
+                    createDiv("Fizz");
                 }
                 else if (i % 5 === 0) {
-                    console.log("Buzz");
+                    createDiv("Buzz");
                 }
                 else {
-                    console.log(i);
+                    createDiv(i);
                 }
             }
         }
