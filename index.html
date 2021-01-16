@@ -26,6 +26,7 @@
                 alert("Input not valid!");
                 return;
             }
+            deleteBox();
             fizzBuzz(number);
         });
 
@@ -34,6 +35,13 @@
             box.className = "box";
             box.innerHTML = value;
             container.appendChild(box);
+        }
+
+        function deleteBox () {
+            let boxes = document.querySelectorAll(".box");
+            for (let i=0; i<boxes.length; i++) {
+                container.removeChild(boxes[i]);
+            }
         }
         
         function fizzBuzz (number) {
